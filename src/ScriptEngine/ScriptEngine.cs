@@ -12,6 +12,7 @@ using System.Reflection;
 using System.Text;
 using Common;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace ScriptEngine
 {
@@ -39,7 +40,7 @@ namespace ScriptEngine
 
         void Update()
         {
-            if (ReloadKey.Value.IsDown())
+            if (Keyboard.current.f6Key.isPressed)
                 ReloadPlugins();
         }
 
